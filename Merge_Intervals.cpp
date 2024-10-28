@@ -7,7 +7,6 @@ using namespace std;
 class Solution {
 public:
     vector<vector<int>> merge(vector<vector<int>>& intervals) {
-        // Step 1: Sort intervals by starting time
         sort(intervals.begin(), intervals.end());
 
         // Step 2: Initialize answer array and add first interval
@@ -36,16 +35,12 @@ public:
 };
 
 int main() {
-    // Example intervals
     vector<vector<int>> intervals = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
 
     // Create Solution object
     Solution sol;
     
-    // Call the merge function
     vector<vector<int>> result = sol.merge(intervals);
-
-    // Output the merged intervals
     cout << "Merged Intervals: ";
     for (const auto& interval : result) {
         cout << "{" << interval[0] << ", " << interval[1] << "} ";
