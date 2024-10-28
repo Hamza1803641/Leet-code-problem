@@ -28,14 +28,12 @@ public:
 
 
 int main() {
-    // Example matrix (3x3)
     vector<vector<int>> matrix = {
         {1, 2, 3},
         {4, 5, 6},
         {7, 8, 9}
     };
 
-    // Print original matrix
     cout << "Original Matrix:" << endl;
     for (const auto& row : matrix) {
         for (int num : row) {
@@ -44,11 +42,9 @@ int main() {
         cout << endl;
     }
 
-    // Rotate the matrix
     Solution sol;
     sol.rotate(matrix);
 
-    // Print rotated matrix
     cout << "\nRotated Matrix by 90 degrees clockwise:" << endl;
     for (const auto& row : matrix) {
         for (int num : row) {
