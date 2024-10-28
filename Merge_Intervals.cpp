@@ -34,3 +34,23 @@ public:
         return ans;
     }
 };
+
+int main() {
+    // Example intervals
+    vector<vector<int>> intervals = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
+
+    // Create Solution object
+    Solution sol;
+    
+    // Call the merge function
+    vector<vector<int>> result = sol.merge(intervals);
+
+    // Output the merged intervals
+    cout << "Merged Intervals: ";
+    for (const auto& interval : result) {
+        cout << "{" << interval[0] << ", " << interval[1] << "} ";
+    }
+    cout << endl;
+
+    return 0;
+}
